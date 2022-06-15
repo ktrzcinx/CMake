@@ -101,6 +101,7 @@ function(gtest_discover_tests_impl)
     TIMEOUT ${_TEST_DISCOVERY_TIMEOUT}
     OUTPUT_VARIABLE output
     RESULT_VARIABLE result
+    ${properties}
   )
   if(NOT ${result} EQUAL 0)
     string(REPLACE "\n" "\n    " output "${output}")
